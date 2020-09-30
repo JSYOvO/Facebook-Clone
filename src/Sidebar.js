@@ -9,11 +9,14 @@ import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
 import ExpandMoreOutlined from '@material-ui/icons/ExpandMoreOutlined';
 
 import "./Sidebar.css";
+import { useStateValue } from './StateProvider';
 
 function Sidebar() {
+    const [{user}, dispatch] = useStateValue();
+
     return (
         <div className="sidebar">
-            <SidebarRow src="https://lh3.googleusercontent.com/ogw/ADGmqu_d27TwMorM94HjiswdquBP7_bBow2rGU59vQG2=s192-c-mo" title="JSYOvO"/>
+            <SidebarRow src={user.photoURL} title={user.displayName}/>
             <SidebarRow Icon={LocalHospitalIcon} title="COVID19 Infomation Center"/>
             <SidebarRow Icon={EmojiFlagIcon} title="Pages"/>
             <SidebarRow Icon={PeopleIcon} title="Friends"/>

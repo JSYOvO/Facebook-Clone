@@ -25,6 +25,11 @@ function StoryReel() {
                 profileSrc="https://pbs.twimg.com/profile_images/923339684326998016/CJvttBv8_400x400.jpg"
                 title="라이츄"
             />
+            <Story
+                image="https://pbs.twimg.com/profile_images/883310597080612864/7bpQshsQ_400x400.jpg"
+                profileSrc="https://trees.gamemeca.com/wp-content/uploads/2020/05/tree_ico_spongebob-314x264.png"
+                title="스폰지밥"
+            />
             
         </div>
     )

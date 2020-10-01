@@ -1,5 +1,5 @@
 
-##### Facebook Clone
+# Facebook Clone
 I ran a Facebook clone with React. It allows users to login with Google account, make real-time post like button.
 
 #### Used

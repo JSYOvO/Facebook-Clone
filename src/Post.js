@@ -6,8 +6,22 @@ import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import NearMeIcon from '@material-ui/icons/NearMe';
 import {ExpandMoreOutlined} from '@material-ui/icons'
+import db from './firebase';
 
-function Post({profilePic, image, username, timestamp, message}) {
+const getLikes = (likes) => {
+    if(likes  >= 1000 * 1000) return `${likes/(1000 * 1000)}M`;
+    else if(likes >= 1000) return `${likes/1000}K`;
+    return likes > 0 ? likes : null;
+}
+
+
+function Post({profilePic, image, username, timestamp, message, likes, id}) {
+    const handleLike = () => {
+        db.collection('posts').doc(id).update({
+            likes : likes + 1,
+        });
+    }
+
     return (
         <div className="post">
             <div className="post__top">
@@ -27,7 +41,8 @@ function Post({profilePic, image, username, timestamp, message}) {
             </div>
 
             <div className="post__options">
-                <div className="post__option">
+                <div className="post__option" onClick={handleLike}>
+                <span>{getLikes(likes)}</span>
                     <ThumbUpIcon/>
                     <p>Like</p> 
                 </div>

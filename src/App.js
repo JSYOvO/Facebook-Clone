@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from './Header.js';
-import Sidebar from './Sidebar.js';
-import Feed from './Feed.js';
-import Widget from './Widget.js';
-import Login from './Login.js';
+import Header from './Components/Header/Header.js';
+import Sidebar from './Components/Sidebar/Sidebar.js';
+import Feed from './Components/Feed/Feed.js';
+import Widget from './Components/Widget/Widget.js';
+import Login from './Components/Login/Login.js';
 import './App.css';
 import { useStateValue } from "./StateProvider";
 

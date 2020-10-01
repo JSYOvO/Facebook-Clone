@@ -1,5 +1,5 @@
 import React from 'react';
-import SidebarRow from './SidebarRow';
+import SidebarRow from '../SidebarRow/SidebarRow';
 import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
 import EmojiFlagIcon from '@material-ui/icons/EmojiFlags';
 import PeopleIcon from '@material-ui/icons/People';
@@ -9,7 +9,7 @@ import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
 import ExpandMoreOutlined from '@material-ui/icons/ExpandMoreOutlined';
 
 import "./Sidebar.css";
-import { useStateValue } from './StateProvider';
+import { useStateValue } from '../../StateProvider';
 
 function Sidebar() {
     const [{user}, dispatch] = useStateValue();

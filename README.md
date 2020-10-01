@@ -11,3 +11,6 @@ I ran a Facebook clone with React. It allows users to login with Google account,
 #### Demo
 https://facebook-clone-983da.web.app/
 
+![demo](https://user-images.githubusercontent.com/55272100/94774757-7d5e3c80-03f9-11eb-8791-7abd08cafe7b.gif)
+
+
